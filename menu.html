@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Yummy-Yummy  </title>		
+	<link rel="icon" type="image/x-icon" href="./favicon/icon.png">	
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
+
+	<style type="text/css">
+		
+		:root {
+		   --container--background: #eee;
+		   --title-color: #192a56;
+		   --header-background: #fff;
+			--black: #192a56;
+			--light-color:#666;
+			--green:#27ae60;
+			--dishes-color: #eee;
+			--dropdown-content-background: #f1f1f1;	
+		   --box-shadow:0 .5rem 1.5rem  rgba(0, 0, 0, 0.1);
+		}
+
+		*{
+		margin: 0; padding: 0;			
+	     }
+	
+
+		/* Header Css Start */
+
+	header{
+		position: fixed; 
+		top: 0;
+		left: 0;
+		right: 0; 		  	    
+	   background: var(--header-background);
+	   display: flex;
+	   justify-content: space-between;
+	   align-items: center;
+	   padding: 1% 5%;
+	   box-shadow: var(--box-shadow);
+	   z-index: 1; 
+	    
+	}
+
+	header .logo{
+		color: var(--black) ;	
+		font-size: 16px;
+		font-weight: bolder;
+		text-decoration: none;
+	}
+
+	header .navbar a{
+		border:px solid;
+		font-size: 16px;
+		border-radius: 5px;
+		padding: 7px 13px;
+		color: var(--light-color) ;
+		text-decoration: none;
+	} 
+	
+
+	header .navbar a.active,
+	header .navbar a:hover{
+
+		color: var(--header-background);
+		background: var(--green);
+	}
+
+
+	.dropdown {
+	    position: relative;
+	    display: inline-block;
+	}
+	.dropbtn {
+	    background-color: transparent  ;
+	    color: var(--light-color);
+	    padding: 7px 13px;
+	    font-size: 16px;
+	    border: none;
+	    border-radius: 5px;
+	    cursor: pointer;
+
+	}
+
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: var(--dropdown-content-background);
+	    min-width: 140px;	   
+	   
+	}
+
+	.dropdown-content a {
+	    color: var(--light-color);
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	    font-size: 16px ;
+	}
+
+	.dropdown-content a:hover {
+				background-color: #ddd;
+	}
+
+	.dropdown:hover .dropdown-content {
+				display: block;
+	}
+
+	.dropdown:hover .dropbtn {
+		color: var(--header-background);
+		background: var(--green);
+	}
+
+
+
+    header .icons a {
+        
+        margin-left: 8px; 
+        text-decoration: none;                        
+        width: 40px; 
+    }
+
+
+/* Header css End */
+
+/* header food items category list */
+
+.list-items {
+	
+  margin-top: 85px ;
+  margin-bottom: 18px ; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.list-items a {
+  display: inline-block;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.list-items a:hover {
+  color: var(--header-background);
+  background: var(--green);
+}
+
+
+/* Menu items Start */
+
+.container {
+	border-top: 2px solid #ccc ;
+    background-color: var(--container--background);
+}
+
+
+
+.heading{
+
+color: var(--black);
+text-align: center;
+font-size: 25px;
+margin-top: 20px;
+
+
+}
+
+
+
+.container .box-container {
+ 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px; 
+
+  margin-top: 40px;  
+  padding: 20px;
+  
+}
+
+.container .box-container .box {
+ 
+  border: 1px solid;
+  padding: 5px;
+  padding-bottom: 15px;
+  background: #fff;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  box-shadow: var(--box-shadow);  
+  text-align: center;
+  margin: 5px;
+
+}
+
+.container .box-container .box:hover{
+
+	border: 3px solid var(--green);
+}
+
+.container .box-container .box h3 {
+  color: var(--title-color);
+  font-size: 25px;
+}
+
+.container .box-container .box h2 {
+  color: var(--green);
+  font-weight: bolder;  
+  font-size: 20px;
+  
+}
+
+.btn {
+	  margin-top: 10px;
+	  display: inline-block;
+	  background-color: var(--black);
+	  color: #fff;
+	  padding: 12px 0px;
+	  font-size: 16px;
+	  border-radius: 5px;
+	  text-align: center; 
+	  text-decoration: none;
+	  width: 65%;
+	  border: none;
+	  margin-bottom: 5px;
+	}	
+
+	.btn:hover{
+		background-color: var(--green);
+	}
+
+
+/* Menu items End  */
+
+
+ ::-webkit-scrollbar{
+  width: 11px;
+}
+
+
+::-webkit-scrollbar-thumb{
+  background: #CACACA;
+  transition: 0.3s ease;
+  border-radius: 15px;
+}
+
+.icons {
+    display: flex;   
+    align-items: center;
+
+}
+
+.search-container {
+    position: relative;
+}
+
+#search-input {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 30px; 
+    transform: translateY(-50%);
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Adjust as needed */
+}
+
+.search-container:hover #search-input {
+    display: block;
+}
+
+
+
+
+</style>
+
+
+</head>
+<body>
+
+	<header>
+
+	<a href="index.html" class="logo"> Yummy-Yummy 😋  </a>
+
+    
+    <nav class="navbar" style="border: px solid;">
+
+    	<a class="active" href="index.html">Home</a>
+    	<a href="menu.html">Menu</a>
+    	<a href="order.html">Order</a>
+    	<a href="contact.html">Contact</a>
+
+    <div class="dropdown">
+
+ <button class="dropbtn">Hi, Ali</button>
+
+  <div class="dropdown-content">
+    <a href="profile.html">Profile</a>
+     <a href="feedback.html">FeedBack</a>
+    <a href="login.html">Login</a>
+    <a href="login.html">Logout</a>
+  </div>
+</div>    	  
+    	
+    </nav>
+
+    <div class="icons" style="border: px solid ;">
+    	
+    	 <div class="search-container">
+
+        <a href="#"> <img src="./icon/dark-search.png" id="search" height="25px"> </a>
+        <form>
+        <input type="text" id="search-input" placeholder="Search...">
+        </form>
+    </div>     
+
+
+    	<a href="cart.html"> <img src="./icon/carta.png" id="cart" height="25px"></a>
+    	<sup><span style="font-size:15px; font-weight: bolder; margin-left: -10px;"></span> </sup>
+    	<a href="#"> <i class="fa-solid fa-bars" style="color: #0c0303;"></i> </a>
+    	
+      
+    	
+    </div>   
+
+</header>
+
+
+
+<section class="list-items">
+
+    <ul>         
+                   
+        <a href="#breakfast">Breakfast</a>
+        <a href="#dinner">Dinner</a> 
+        <a href="#desert">Desert</a> 
+        <a href="#bbq">BBQ</a>  
+        <a href="#chinese">Chinese</a>
+        <a href="#bread">Bread</a> 
+        <a href="#sweet">Sweet</a> 
+        <a href="#drink">Drink</a>               
+        
+
+    </ul>
+
+</section>
+
+
+
+
+
+
+<section class="container">
+
+    <div>
+
+        <h1 class="heading" id="breakfast"> BREAKFAST</h1>
+
+   </div>	
+
+
+	<div class="box-container">
+	
+				        
+			<div class="box" >				       
+
+					<img src="./images/menu-dishes/fried-eggs-bread-fresh-vegetables.png" height="200px">		       		    
+					<h3>Tea Bread Egg</h3>
+					<h2>Rs.550 </h2>
+					<button  class="btn">Add To Cart</button>				       
+
+			</div>  
+            
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/cream-roll-berry.png" height="200px">		       		    
+                <h3>Tea Berry</h3>
+                <h2>Rs.550 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+             </div>  
+
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/Huevos-Rancheros.png" height="200px">		       		    
+                <h3>Omlet Rencheros</h3>
+                <h2>Rs.300 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+            </div>  
+    		 
+    		
+    </div>
+
+
+    <div>
+
+        
+        <h1 class="heading" id="dinner"> DINNER</h1>
+
+   </div>	
+
+
+	<div class="box-container">
+	
+				        
+			<div class="box">				       
+
+					<img src="./images/menu-dishes/chole-masala.png" height="200px">		       		    
+					<h3>Chole Masala</h3>
+					<h2>Rs.200 </h2>
+					<button  class="btn">Add To Cart</button>				       
+
+			</div>  
+            
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/sjji-chicken.png" height="200px">		       		    
+                <h3>Chicken</h3>
+                <h2>Rs.2500 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+             </div>  
+
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/kabuli-pulao.png" height="200px">		       		    
+                <h3>Kabuli Pulao</h3>
+                <h2>Rs.200 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+            </div>  
+    		 
+    		
+    </div>
+
+
+    <div>
+
+        
+        <h1 class="heading" id="desert"> DESERT</h1>
+
+   </div>	
+
+
+	<div class="box-container">
+	
+				        
+			<div class="box">				       
+
+					<img src="./images/menu-dishes/choco-donut.jpg" height="200px">		       		    
+					<h3>Choco Donut</h3>
+					<h2>Rs.70 </h2>
+					<button  class="btn">Add To Cart</button>				       
+
+			</div>  
+            
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/cream-roll-berry.png" height="200px">		       		    
+                <h3>Cream Role</h3>
+                <h2>Rs.100 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+             </div>  
+
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/French-Macrons.jpg" height="200px">		       		    
+                <h3>French Macrons</h3>
+                <h2>Rs.50 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+            </div>  
+    		 
+    		
+    </div>
+
+
+    <div>
+
+        
+        <h1 class="heading" id="bbq"> BBQ</h1>
+
+   </div>	
+
+
+	<div class="box-container">
+	
+				        
+			<div class="box">				       
+
+					<img src="./images/menu-dishes/kabab.jpg" height="200px">		       		    
+					<h3>Kabab</h3>
+					<h2>Rs.120 </h2>
+					<button  class="btn">Add To Cart</button>				       
+
+			</div>  
+            
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/beef-boti.jpeg" height="200px">		       		    
+                <h3>Beef Boti</h3>
+                <h2>Rs.100 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+             </div>  
+
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/Fried-wings.png" height="200px">		       		    
+                <h3>Fried Wings</h3>
+                <h2>Rs.30 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+            </div>  
+    		 
+    		
+    </div>
+
+    <div>
+
+        
+        <h1 class="heading" id="chinese"> CHINESE</h1>
+
+   </div>	
+
+
+	<div class="box-container">
+	
+				        
+			<div class="box">				       
+
+					<img src="./images/menu-dishes/corn-chicken-soup.jpg" height="200px">		       		    
+					<h3>Corn Soup</h3>
+					<h2>Rs.250 </h2>
+					<button  class="btn">Add To Cart</button>				       
+
+			</div>  
+            
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/noodle-soup.jpg" height="200px">		       		    
+                <h3>Noodle Soup</h3>
+                <h2>Rs.400 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+             </div>  
+
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/noodles-vegetables.jpg" height="200px">		       		    
+                <h3>Noodle Vegetables Soup</h3>
+                <h2>Rs.600 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+            </div>  
+    		 
+    		
+    </div>
+
+    <div>
+
+        
+        <h1 class="heading" id="bread"> BREAD</h1>
+
+   </div>	
+
+
+	<div class="box-container">
+	
+				        
+			<div class="box">				       
+
+					<img src="./images/menu-dishes/nan.jpg" height="200px">		       		    
+					<h3>Nan</h3>
+					<h2>Rs.20 </h2>
+					<button  class="btn">Add To Cart</button>				       
+
+			</div>  
+            
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/roti.jpg" height="200px">		       		    
+                <h3>Roti</h3>
+                <h2>Rs.15 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+             </div>  
+
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/bread.jpg" height="200px">		       		    
+                <h3>Bread</h3>
+                <h2>Rs.70 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+            </div>  
+    		 
+    		
+    </div>
+
+    <div>
+
+        
+        <h1 class="heading" id="sweet"> SWEETS</h1>
+
+   </div>	
+
+
+	<div class="box-container">
+	
+				        
+			<div class="box">				       
+
+					<img src="./images/menu-dishes/jalebi.png" height="200px">		       		    
+					<h3>Jalebi</h3>
+					<h2>Rs.400 </h2>
+					<button  class="btn">Add To Cart</button>				       
+
+			</div>  
+            
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/choco-cake.png" height="200px">		       		    
+                <h3>Choco Cake</h3>
+                <h2>Rs.350 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+             </div>  
+
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/sweets.jpg" height="200px">		       		    
+                <h3>Sweets</h3>
+                <h2>Rs.800 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+            </div>  
+    		 
+    		
+    </div>
+
+    <div>
+
+        
+        <h1 class="heading" id="drink"> DRINK</h1>
+
+   </div>	
+
+
+	<div class="box-container">
+	
+				        
+			<div class="box">				       
+
+					<img src="./images/menu-dishes/coke.jpeg" height="200px">		       		    
+					<h3>Coka Cola 1.5L</h3>
+					<h2>Rs.200 </h2>
+					<button  class="btn">Add To Cart</button>				       
+
+			</div>  
+            
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/sangria-cocktail.png" height="200px">		       		    
+                <h3>Mint Margita</h3>
+                <h2>Rs.150 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+             </div>  
+
+            <div class="box">				       
+
+                <img src="./images/menu-dishes/redbull.jpg" height="200px">		       		    
+                <h3>Red Bull</h3>
+                <h2>Rs.450 </h2>
+                <button  class="btn">Add To Cart</button>				       
+
+            </div>  
+    		 
+    		
+    </div>
+
+
+
+</section>
+
+
+</body>
+</html>
+
+
+</body>
+</html>

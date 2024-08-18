@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Yummy-Yummy </title>		
+	<link rel="icon" type="image/x-icon" href="./favicon/icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
+
+  <style type="text/css">
+    
+    :root {
+    --header-background: #fff;
+    --black: #192a56;
+    --light-color:#666;
+    --green:#27ae60;
+    --dishes-color: #eee;
+    --dropdown-content-background: #f1f1f1; 
+      --box-shadow:0 .5rem 1.5rem  rgba(0, 0, 0, 0.1);
+  }
+    
+  *{
+    margin: 0; padding: 0;    
+    
+  } 
+
+
+
+  /* Header Css Start */
+
+  header{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;             
+     background: var(--header-background);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1% 5%;
+     box-shadow: var(--box-shadow);
+     z-index: 1; 
+
+      
+  }
+
+  header .logo{
+    color: var(--black) ; 
+    font-size: 16px;
+    font-weight: bolder;
+    text-decoration: none;
+  }
+
+  header .navbar a{
+    border:px solid;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 7px 13px;
+    color: var(--light-color) ;
+    text-decoration: none;
+  } 
+  
+
+  header .navbar a.active,
+  header .navbar a:hover{
+
+    color: var(--header-background);
+    background: var(--green);
+  }
+
+
+  .dropdown {
+      position: relative;
+      display: inline-block;
+  }
+  .dropbtn {
+      background-color: transparent  ;
+      color: var(--light-color);
+      padding: 7px 13px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+  }
+
+  .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: var(--dropdown-content-background);
+      min-width: 140px;    
+     
+  }
+
+  .dropdown-content a {
+      color: var(--light-color);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 16px ;
+  }
+
+  .dropdown-content a:hover {
+        background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+        display: block;
+  }
+
+  .dropdown:hover .dropbtn {
+    color: var(--header-background);
+    background: var(--green);
+  }
+
+
+
+ header .icons a {
+        
+        margin-left: 8px; 
+        text-decoration: none;                        
+        width: 40px; 
+    }
+
+
+    .icons {
+    display: flex;   
+    align-items: center;
+
+}
+
+.search-container {
+    position: relative;
+}
+
+#search-input {
+    display: none ;
+    position: absolute;
+    top: 50%;
+    right: 30px; 
+    transform: translateY(-50%);
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Adjust as needed */
+}
+
+.search-container:hover #search-input {
+    display: block;
+}
+
+
+
+ .title{
+
+  margin-top: 85px;
+  text-align: center;
+  color: var(--green);
+ }
+
+    table{
+     
+      border-collapse: collapse;
+      width: 90%;   
+      text-align: center;
+      margin-left: 65px;
+      margin-top: 25px;
+      border: 1px solid #ccc;           
+    
+    
+    }
+
+    th{
+      padding: 12px;
+      padding-left: 15px;     
+      color: #fff;
+      border: 1px solid #ccc;
+      background-color: #27ae60;    
+
+   
+    }
+
+    td{
+      border: px solid;
+      font-size: 15px;    
+      padding-left: 15px;
+      border: 1px solid #ccc;
+
+    }
+
+    .qty{
+      padding: 5px;
+      width: 20%;
+      text-align: center;
+    }
+
+    .update-btn{
+
+      display: inline-block;
+      background-color: var(--black);
+      color: #fff;
+      padding: 7px;
+      font-size: 12px;   
+      text-align: center; 
+      border: none;
+       width: 20%;   
+      
+
+  } 
+
+  .update-btn:hover{
+    background-color: var(--green);
+  }
+
+
+  .bill-table{
+    
+    border-collapse: collapse;
+    width: 20%;
+    margin-right: 70px;
+    margin-bottom: 25px;
+    float: right;
+
+    border: none;
+
+  }
+
+  .bill-table td{
+
+    padding: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    border: none;
+  }
+
+  .payment{
+
+    margin-top: 10px;
+    display: inline-block;
+    background-color: var(--black);
+    color: #fff;
+    padding: 10px 0px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-align: center; 
+    text-decoration: none;
+    width: 75%;
+  } 
+
+  .payment:hover{
+    background-color: var(--green);
+  }
+
+
+
+
+   ::-webkit-scrollbar{
+  width: 11px;
+}
+
+
+::-webkit-scrollbar-thumb{
+  background: #CACACA;
+  transition: 0.3s ease;
+  border-radius: 15px;
+}
+
+  
+
+
+/* Header css End */
+  </style>
+
+	
+</head>
+<body>
+
+
+	<header>
+
+        <a href="index.html" class="logo"> Yummy-Yummy 😋  </a>
+        
+       <nav class="navbar">
+    
+            <a class="active" href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="order.html">Order</a>
+            <a href="contact.html">Contact</a>
+    
+       <div class="dropdown">
+    
+          <button class="dropbtn">Hi, Ali</button>
+    
+    
+              <div class="dropdown-content">
+                <a href="profile.html">Profile</a>
+                <a href="feedback.html">FeedBack</a>
+                <a href="login.html">Login</a>
+                <a href="login.html">Logout</a>
+              </div>
+    
+        </div>    	  
+            
+       </nav>
+    
+    
+       <div class="icons">
+    
+            <div class="search-container">
+    
+            <a href="#"> <img src="./icon/dark-search.png" id="search" height="25px"> </a>
+            <form>
+            <input type="text" id="search-input" placeholder="Search...">
+            </form>
+    
+          
+        </div>
+            
+       
+            <a href="cart.html"> <img src="./icon/carta.png" id="cart" height="25px"></a>
+            <sup><span style="font-size:15px; font-weight: bolder; margin-left: -10px;"></span> </sup>
+          
+    
+            <a href="#"> <i class="fa-solid fa-bars" style="color: #0c0303; height: 20px;"></i> </a> 
+       
+    
+                    
+       </div>    
+    
+    </header>
+  <h2 class="title">MY CART</h2>
+
+
+
+
+        <table>
+          <tr>
+                   <th>Sr</th>                   
+                   <th>Name</th>
+                   <th>Image</th>
+                   <th>Price</th>                               
+                   <th>Quantity</th>
+                   <th>Total Price</th>
+                   <th>Action</th>
+                </tr>
+
+             
+        
+            <tr>
+           
+             <td>1</td>      
+             <td>Choco Cake</td>
+             <td><img src="./images/popular-dishes/Choco Cake.png" height="85px" width="85px"></td>
+             <td class="price">Rs.150</td>
+
+              
+              <td>
+
+                         <div>
+          
+                            <form method='post'>
+
+                            <input type='number' name='qty' min='1' class='qty'>
+                            <input type='submit' name='update-qty' class='update-btn' value='Update'>     
+
+                            </form>
+
+                         </div>
+
+                   </td>
+            
+              <td class='total'> Rs.150 /-</td>
+
+             <td> <a href=""> <img src= './images/delete/delete.png' height='25px'></a> </td>
+
+             
+
+        </tr>
+        
+
+        </table>
+
+    <table class="bill-table">
+    <tr>
+              <td>Sub-Total</td>
+              <td id="sub-total"> Rs. 150 /-</td>
+    </tr>
+    <tr>
+              <td>Delivery Fee</td>
+              <td id="delivery-fee"> Rs.200/-</td> 
+    </tr>
+    <tr>
+              <td>Grand-Total</td>              
+              <td id='grand-total'>Rs.350/-</td>
+
+          </tr>
+    <tr>
+              <td colspan='2' style='padding: 10px; text-align: center;'>
+                  <a href='#' class='payment'>Check Out</a>
+              </td>
+          </tr>
+    </table>
+  
+
+
+
+</body>
+</html>

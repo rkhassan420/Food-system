@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Yummy-Yummy  </title>	
+ 	<link rel="icon" type="image/x-icon" href="./favicon/icon.png">
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
+ 	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
+ 	<style type="text/css">
+
+	:root {
+		
+	   --header-background: #fff;
+		--black: #192a56;
+		--light-color:#666;
+		--green:#27ae60;
+		--dishes-color: #eee;
+		--dropdown-content-background: #f1f1f1;	
+	   --box-shadow:0 .5rem 1.5rem  rgba(0, 0, 0, 0.1);
+
+	}
+
+		
+	*{
+		margin: 0; padding: 0;		
+	}
+
+
+	/* Header Css Start */
+
+	header{
+		position: fixed; 
+		top: 0;
+		left: 0;
+		right: 0; 		  	    
+	   background: var(--header-background);
+	   display: flex;
+	   justify-content: space-between;
+	   align-items: center;
+	   padding: 1% 5%;
+	   box-shadow: var(--box-shadow);
+	   z-index: 1; 
+	    
+	}
+
+	header .logo{
+		color: var(--black) ;	
+		font-size: 16px;
+		font-weight: bolder;
+		text-decoration: none;
+	}
+
+	header .navbar a{
+		border:px solid;
+		font-size: 16px;
+		border-radius: 5px;
+		padding: 7px 13px;
+		color: var(--light-color) ;
+		text-decoration: none;
+	} 
+	
+
+	header .navbar a.active,
+	header .navbar a:hover{
+
+		color: var(--header-background);
+		background: var(--green);
+	}
+
+
+	.dropdown {
+	    position: relative;
+	    display: inline-block;
+	}
+	.dropbtn {
+	    background-color: transparent  ;
+	    color: var(--light-color);
+	    padding: 7px 13px;
+	    font-size: 16px;
+	    border: none;
+	    border-radius: 5px;
+	    cursor: pointer;
+
+	}
+
+	.dropdown-content {
+	    display: none;
+	    position: absolute;
+	    background-color: var(--dropdown-content-background);
+	    min-width: 140px;	   
+	   
+	}
+
+	.dropdown-content a {
+	    color: var(--light-color);
+	    padding: 12px 16px;
+	    text-decoration: none;
+	    display: block;
+	    font-size: 16px ;
+	}
+
+	.dropdown-content a:hover {
+				background-color: #ddd;
+	}
+
+	.dropdown:hover .dropdown-content {
+				display: block;
+	}
+
+	.dropdown:hover .dropbtn {
+		color: var(--header-background);
+		background: var(--green);
+	}
+
+
+
+ header .icons a {
+        
+        margin-left: 8px; 
+        text-decoration: none;                        
+        width: 40px; 
+    }
+
+
+/* Header css End */
+
+
+/* Swiper Section Start */
+
+	.home{
+
+		border: px solid;	
+		margin-top: 55px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 80px 0px;
+				
+	}
+
+	.home div{
+		border: px solid;
+	}	
+	
+
+	.home .content h5{
+
+		color: var(--green);
+		font-size: 20px;
+	}
+
+	.home  .content h3{
+
+		color: var(--black);
+		font-size: 40px;
+	}
+
+	.home  .content p{
+
+		color: var(--light-clor);
+		font-size: 16px;
+		padding: 5px 0px;
+		line-height: 20px;
+	}
+
+	.main-order-btn{
+		margin-top: 7px;	 
+	   display: inline-block;
+	   background-color: var(--black);
+	   color: #fff;
+	   font-size: 16px;
+	   padding: 8px 10px;	  
+	   border-radius: 5px;
+	   text-align: center; 
+	   text-decoration: none; 
+
+	}
+
+	.main-order-btn:hover{
+		background-color: var(--green);
+	}
+
+
+/* Swiper Css Ends  */
+
+
+/*popular dishes css start */
+
+	
+	.sub-heading{
+
+		color: var(--green);
+		text-align: center;	
+		font-size: 20px;
+
+	}
+
+	.heading{
+
+		color: var(--black);
+		text-align: center;
+		font-size: 25px;
+		
+		
+	}
+
+
+	.dishes{
+		background-color: var(--dishes-color);		
+		padding-top: 30px;
+	}
+
+	.dishes .box-container {
+		
+		margin-bottom: 30px;		
+		padding: 50px;		
+
+	    display: grid;
+	    grid-template-columns: repeat(3, 1fr);
+	    gap: 10px;  	    
+	    
+	}
+
+	.dishes .box-container .box{
+
+		padding: 20px 10px;
+		background: #fff ;
+		border-radius: 5px;
+		border: .1rem solid rgba(0, 0, 0, .2);
+		box-shadow: var(--box-shadow);
+		text-align: center;	
+		cursor: pointer;	
+
+	}
+
+	.dishes .box-container .box:hover{
+
+		border: 3px solid var(--green);
+	}
+
+	.dishes .box-container .box h3{
+
+		color: var(--black);
+		font-size: 25px ;
+	}
+
+	.dishes .box-container .box  h2{
+
+		color: var(--green);
+		font-weight: bolder;		
+		font-size: 20px;
+	}
+
+
+	.btn {
+	  margin-top: 10px;
+	  display: inline-block;
+	  background-color: var(--black);
+	  color: #fff;
+	  padding: 12px 0px;
+	  font-size: 15px;
+	  border-radius: 5px;
+	  text-align: center; 
+	  text-decoration: none;
+	  width: 57%;
+	  border: none;
+	}	
+
+	.btn:hover{
+		background-color: var(--green);
+	}
+
+
+/*popular dishes css ends*/
+
+
+/*about us css start*/
+
+
+	.about { 
+	  	 
+	  padding: 50px 20px;
+
+	  display: grid;
+	  grid-template-columns: repeat(2, 1fr);
+	  gap: 10px;	
+	}
+
+	.about .about-content{
+			
+			border: px solid;
+
+	}	
+	.about .about-img{
+			margin-left: 250px;
+			border: px solid;
+
+	}	
+
+	.about .about-content h2{
+		color: var(--black);
+		font-size: 40px;
+		text-align: left ;
+		margin-top: 30px;	
+
+	}
+	.about .about-content p{
+
+		margin-top: 9px;
+		margin-bottom: 15px;
+		word-spacing: 2px;
+		line-height: 23px;
+		font-size: 17px;
+		text-align: justify;
+	}
+
+	.about-btn{
+		border: px solid;
+		margin-top: 10px;	
+		
+	}
+
+	.about-btn button{
+		padding: 15px;
+		width: 150px;	
+		margin: 0px 5px;	
+		background-color: 	#D0D0D0;
+		border-radius: 10px;
+		border: .1rem solid rgba(0, 0, 0, .2);
+		cursor: pointer;
+	}   
+	
+
+
+ /*about us css ends here*/
+
+
+ /*footer css start*/
+
+	footer{
+		background:  var(--dishes-color);		
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		padding: 30px;
+		border-top: 2px solid #ccc;	
+
+	}
+	
+	footer div h2{
+		color: var(--black);
+	}
+
+ /*footer css ends here*/
+
+
+
+ ::-webkit-scrollbar{
+  width: 11px;
+}
+
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #CACACA;
+  transition: 0.3s ease;
+  border-radius: 15px;
+}	 
+
+
+.icons {
+    display: flex;   
+    align-items: center;
+
+}
+
+.search-container {
+    position: relative;
+}
+
+#search-input {
+    display: none ;
+    position: absolute;
+    top: 50%;
+    right: 30px; 
+    transform: translateY(-50%);
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Adjust as needed */
+}
+
+.search-container:hover #search-input {
+    display: block;
+}
+ 	
+
+</style>	
+
+
+</head>
+<body>
+
+
+
+
+
+	<!..Header start here..>
+
+
+	<header>
+
+	<a href="index.html" class="logo"> Yummy-Yummy 😋  </a>
+    
+   <nav class="navbar">
+
+    	<a class="active" href="index.html">Home</a>
+    	<a href="menu.html">Menu</a>
+    	<a href="order.html">Order</a>
+    	<a href="contact.html">Contact</a>
+
+   <div class="dropdown">
+
+  	<button class="dropbtn">Hi, Ali</button>
+
+
+		  <div class="dropdown-content">
+		    <a href="profile.html">Profile</a>
+		    <a href="feedback.html">FeedBack</a>
+		    <a href="login.html">Login</a>
+		    <a href="login.html">Logout</a>
+		  </div>
+
+	</div>    	  
+    	
+   </nav>
+
+
+   <div class="icons">
+
+   	 <div class="search-container">
+
+        <a href="#"> <img src="./icon/dark-search.png" id="search" height="25px"> </a>
+        <form>
+        <input type="text" id="search-input" placeholder="Search...">
+        </form>
+
+      
+    </div>
+    	
+   
+    	<a href="cart.html"> <img src="./icon/carta.png" id="cart" height="25px"></a>
+    	<sup><span style="font-size:15px; font-weight: bolder; margin-left: -10px;"></span> </sup>
+      
+
+    	<a href="#"> <i class="fa-solid fa-bars" style="color: #0c0303; height: 20px;"></i> </a> 
+   
+
+            	
+   </div>    
+
+</header>
+
+<!..Header Ends here..>
+
+<!..Slide start here..>
+
+
+
+<div class="home" >	
+
+					<div class="content">
+
+						<h5> Our Special Dish </h5>
+						<h3> Yummy-Yummy Pizza</h3>
+						<p>Pizza is the missing piece that makes every day complete , a simple <br>yet delicious joy in life</p>
+						<!-- <a href="#" class="main-order-btn">Order Now</a> -->
+						
+					</div>
+
+					<div class="image">
+
+						
+						<img src="./images/slide-images/pizza.png" height="400px">
+
+
+						
+					</div>	
+	
+</div>
+
+<!..Slide Ends here..>
+
+<!..Popular dishes start here..>	
+
+
+
+<section class="dishes" id="dishes">
+
+	   <div>
+
+	    	<h3 class="sub-heading"> Our Dishes </h3>
+	    	<h1 class="heading"> POPULAR DISHES</h1>
+
+	   </div>	
+
+
+    	<div class="box-container" id="popularData">
+
+
+		
+
+		       <div class="box">				       
+
+				        <img src="./images/popular-dishes/Chicken.png" height="200px">		       		    
+				        <h3>Sajji Chicken</h3>
+				        <h2>Rs.1500 </h2>
+                        <button  class="btn">Add To Cart</button>				       
+				        
+				</div>
+
+                <div class="box">				       
+
+                    <img src="./images/popular-dishes/Choco Cake.png" height="200px">		       		    
+                    <h3>Sajji Chicken</h3>
+                    <h2>Rs.250 </h2>
+                    <button  class="btn">Add To Cart</button>				       
+                    
+                 </div>
+
+                 <div class="box">				       
+
+                    <img src="./images/popular-dishes/Fries.png" height="200px">		       		    
+                    <h3>Sajji Chicken</h3>
+                    <h2>Rs.450 </h2>
+                    <button  class="btn">Add To Cart</button>				       
+                    
+                </div>
+
+                <div class="box">				       
+
+                    <img src="./images/popular-dishes/Turkish Platter.png" height="200px">		       		    
+                    <h3>Sajji Chicken</h3>
+                    <h2>Rs.1200 </h2>
+                    <button  class="btn">Add To Cart</button>				       
+                    
+                </div>
+
+                <div class="box">				       
+
+                    <img src="./images/popular-dishes/Yummy Pizza.png" height="200px">		       		    
+                    <h3>Sajji Chicken</h3>
+                    <h2>Rs.1300 </h2>
+                    <button  class="btn">Add To Cart</button>				       
+                    
+                </div>
+
+                <div class="box">				       
+
+                    <img src="./images/popular-dishes/Zinger Burger.png" height="200px">		       		    
+                    <h3>Sajji Chicken</h3>
+                    <h2>Rs.250 </h2>
+                    <button  class="btn">Add To Cart</button>				       
+                    
+            </div>
+				    
+
+			   		
+
+
+        </div> 
+
+    	
+</section>
+
+
+
+
+
+<!..Popular dishes Ends here..>
+
+
+
+   <h3 class="sub-heading "> About Us</h3>
+ 	<h1 class="heading"> WHY CHOOSE US</h1>
+
+
+ <section class="about" id="about">
+ 	
+
+	 	<div class="about-img">
+
+	 		<img src="./images/about/about.jpg" height="350px">
+	 		
+	 	</div>
+
+ 	<div class="about-content">
+
+ 		<h2>Best Food In The Country</h2>
+ 		<p>Welcome to Yummy-Yummy 😋 , where culinary excellence meets convenience. At the heart of our platform is a <br> diverse array of delectable dishes meticulously curated to satisfy every craving. From savory classics to innovative <br> creations, our menu is a testament to our commitment to delivering an unparalleled gastronomic experience to your <br> doorstep.Each dish is crafted with the finest ingredients, prepared by skilled chefs who infuse passion and expertise <br> into every recipe.</p>
+
+ 		<div class="about-btn">
+
+ 		<button class=""> <img src="./icon/shipped.png" height="20px" ></img> Fast Delivery</button>
+ 		<button class=""> <img src="./icon/dollar-symbol.png" height="20px"></img>Easy Payments</button>
+ 		<button class=""> <img src="./icon/headphone.png" height="20px"></img>24/7 Service</button> 		
+
+ 	   </div>	
+ 	
+ 		
+ 		
+ 	</div> 	 		
+
+ 	
+ </section>
+
+ <!..About us Ends here..>
+
+ <!..Footer start here here..> 
+
+ <footer>
+
+ 	<div>
+
+ 		<h2>Yummy-Yummy 😋</h2><br><br>
+
+ 		
+ 		<h2>Contact Us</h2>
+ 		<p style="font-size: 18px; margin-top:8px"><img src="./images/footer/telephone-call.png" height="20px"> +92 324 5396 002</p>
+ 		<p style="font-size: 18px;"><img src="./images/footer/email.png" height="20px"> support@Yummy-Yummy.com</p>
+ 		<p style="font-size: 18px;"><img src="./images/footer/location.png" height="20px"> Yummy-Yummy - Anwar Town, Phool Nagar, Multan Rd, Pattoki, Kasur, Punjab, Pakistan</p>
+
+ 		
+ 	</div> 	
+
+
+ 	<div>
+
+ 		<h2>Our Timings</h2><br>
+ 		<p style="font-size: 18px;">Monday-Sunday</p><br>
+ 		<p style="font-size: 18px;">10:00 AM - 1:00 AM</p>
+ 	
+ 		
+ 	</div>
+
+
+ 	
+ 
+ </footer>
+
+ <!--Footer Ends here-->
+
+
+
+ 
+</body>
+</html>

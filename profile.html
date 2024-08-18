@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Yummy-Yummy  </title>	   
+	<link rel="icon" type="image/x-icon" href="./favicon/icon.png">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
+
+    <style>
+
+        :root {
+           --container--background: #eee;
+           --title-color: #192a56;
+           --header-background: #fff;
+            --black: #192a56;
+            --light-color:#666;
+            --green:#27ae60;
+            --dishes-color: #eee;
+            --dropdown-content-background: #f1f1f1; 
+           --box-shadow:0 .5rem 1.5rem  rgba(0, 0, 0, 0.1);
+        }
+
+        *{
+        margin: 0; padding: 0;         
+        }
+
+    
+
+        /* Header Css Start */
+
+    header{
+        position: fixed; 
+        top: 0;
+        left: 0;
+        right: 0;               
+       background: var(--header-background);
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 1% 5%;
+       box-shadow: var(--box-shadow);
+       z-index: 1; 
+        
+    }
+
+    header .logo{
+        color: var(--black) ;   
+        font-size: 16px;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+
+    header .navbar a{
+        border:px solid;
+        font-size: 16px;
+        border-radius: 5px;
+        padding: 7px 13px;
+        color: var(--light-color) ;
+        text-decoration: none;
+    } 
+    
+
+    header .navbar a.active,
+    header .navbar a:hover{
+
+        color: var(--header-background);
+        background: var(--green);
+    }
+
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropbtn {
+        background-color: transparent  ;
+        color: var(--light-color);
+        padding: 7px 13px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--dropdown-content-background);
+        min-width: 140px;      
+       
+    }
+
+    .dropdown-content a {
+        color: var(--light-color);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 16px ;
+    }
+
+    .dropdown-content a:hover {
+                background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+                display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        color: var(--header-background);
+        background: var(--green);
+    }
+
+
+
+ header .icons a {
+        
+        margin-left: 8px; 
+        text-decoration: none;                        
+        width: 40px; 
+    }
+
+    .icons {
+    display: flex;   
+    align-items: center;
+
+}
+
+.search-container {
+    position: relative;
+}
+
+#search-input {
+    display: none ;
+    position: absolute;
+    top: 50%;
+    right: 30px; 
+    transform: translateY(-50%);
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Adjust as needed */
+}
+
+.search-container:hover #search-input {
+    display: block;
+}
+
+
+
+/* Header css End */
+
+
+        .container {
+            
+            margin-top: 110px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+
+          /*  border:1px solid;  */          
+        }             
+
+
+        .container .profile{
+           
+            width: 65%;                   
+            border-radius: 12px;
+            border: 2px solid #ccc;
+            box-shadow:0 .5rem 1.5rem  rgba(0, 0, 0, 0.2);
+            padding: 25px 10px;
+            
+        }
+
+         .container .profile h2{
+
+            margin-bottom: 17px;
+            margin-left: 50px;
+            margin-top: 8px;
+            color: #192a56;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+         .container .profile .form{            
+          
+            width: 100%;
+            border:px solid;            
+         }
+
+          .container .profile .form table{
+          
+            width: 95%;
+            margin-left: 43px;
+            border: px solid;
+          }
+
+          tr td{
+     
+            padding: 7px;
+            border: px solid;
+          }     
+
+
+        .container .profile .form .table label{
+
+            font-size: 17px;
+            color: var(--black);
+            font-weight: bolder;
+
+        }
+
+        .container .profile .form .table input{
+
+            padding: 10px;
+            margin-bottom: 6px;
+            margin-right: 7px;
+            border-radius: 5px;
+            border-color: #eee;         
+            box-shadow:0 .5rem 1.5rem  rgba(0, 0, 0, 0.1);
+            width: 80%;
+
+        }
+        
+
+        .container .profile .form #show_pass{
+            
+            width: 12%;
+            display: inline-block;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #fff;
+            border-top-right-radius: 3px;
+            border-top-left-radius: 7px;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 3px;                
+            background-color: #192a56;
+            margin-left: -98px;
+            text-align: center;
+            text-decoration: none;
+
+        }
+
+        .container .profile .form #show_pass:hover{
+
+            background-color: var(--green);
+        }
+
+        .container .profile .form #change_pass{
+           
+            width: 40%;
+            display: inline-block;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 7px;           
+            background-color: #192a56;
+            margin-left: 70px;
+            text-align: center;
+            text-decoration: none;
+
+        }
+
+
+        .container .profile .form #change_pass:hover{
+
+            background-color: var(--green);
+        }
+
+        .container .profile .form input[type=address]{
+
+            width: 80%;
+         }
+        
+
+         .container .profile .form #save-btn{
+
+           
+            width: 75%;
+            display: inline-block;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 7px;
+            text-decoration: none;
+            margin-top: 15px;
+            background-color: #192a56;
+            margin-left: 90px;
+            margin-bottom: 10px;
+            text-align: center;
+            border: none;
+
+         }
+
+         .container .profile .form #save-btn:hover{
+
+            background-color: var(--green);
+         }
+
+
+
+        ::-webkit-scrollbar{
+           width: 11px;
+        }
+
+
+        ::-webkit-scrollbar-thumb{
+          background: #CACACA;
+          transition: 0.3s ease;
+          border-radius: 15px;
+        }    
+
+
+#fname{
+
+    width: 10%;
+}
+
+    footer{
+        background:  var(--dishes-color);       
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 30px;
+        border-top: 2px solid #ccc; 
+        margin-top: 57px;
+
+    }
+    
+    footer div h2{
+        color: var(--black);
+    }
+  
+
+</style>
+</head>
+<body>
+
+	<header>
+
+        <a href="index.html" class="logo"> Yummy-Yummy 😋  </a>
+        
+       <nav class="navbar">
+    
+            <a class="active" href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="order.html">Order</a>
+            <a href="contact.html">Contact</a>
+    
+       <div class="dropdown">
+    
+          <button class="dropbtn">Hi, Ali</button>
+    
+    
+              <div class="dropdown-content">
+                <a href="profile.html">Profile</a>
+                <a href="feedback.html">FeedBack</a>
+                <a href="login.html">Login</a>
+                <a href="login.html">Logout</a>
+              </div>
+    
+        </div>    	  
+            
+       </nav>
+    
+    
+       <div class="icons">
+    
+            <div class="search-container">
+    
+            <a href="#"> <img src="./icon/dark-search.png" id="search" height="25px"> </a>
+            <form>
+            <input type="text" id="search-input" placeholder="Search...">
+            </form>
+    
+          
+        </div>
+            
+       
+            <a href="cart.html"> <img src="./icon/carta.png" id="cart" height="25px"></a>
+            <sup><span style="font-size:15px; font-weight: bolder; margin-left: -10px;"></span> </sup>
+          
+    
+            <a href="#"> <i class="fa-solid fa-bars" style="color: #0c0303; height: 20px;"></i> </a> 
+       
+    
+                    
+       </div>    
+    
+    </header>
+    
+
+
+
+
+
+
+<section class="container">
+
+    <div class="profile">
+
+        <h2>Profile</h2>        
+
+    <form class="form" method="post">
+        
+
+        <table class="table">
+
+            <tr>
+
+                <td>
+                    <label for="first-name">First Name</label><br>
+                    <input type="text" id="first-name" name="first-name" >
+                </td>
+
+                <td>                
+                    <label for="last-name">Last Name:</label><br>
+                    <input type="text" id="last-name" name="last-name" >
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" >
+                </td>
+
+                <td>                
+                    <label for="number">Contact Number</label><br>
+                    <input type="text" name="number" >
+                </td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>
+                    <label for="pass">Password:</label><br>
+                     <input type="password" id="code" name="pass" >
+                    <a href="#" id="show_pass" >Show</a>
+                </td>
+                </td>
+
+                <td>                
+                    <a href="change-pass.html" id="change_pass">Change Password</a>
+                </td>
+
+            </tr>
+
+             <tr>                
+
+                <td>                
+                    <label for="address">Address</label><br>                  
+                    <input type="address" name="address">                 
+                </td>
+
+                <td>                
+                    <label for="postal">Postal Code</label><br>
+                   <input type="text" name="postal" >
+                </td>
+
+            </tr>
+
+            <tr>
+                <td colspan="2"><input type="submit" name="submit" value="Save Profile" id="save-btn"></td>
+            </tr>
+
+           
+        </table>
+    </form>
+</div>
+
+   
+
+
+   
+    
+</section>
+
+<footer>
+
+    <div>
+
+        <h2>Yummy-Yummy 😋</h2><br><br>
+
+        
+        <h2>Contact Us</h2>
+        <p style="font-size: 18px; margin-top:8px"><img src="./images/footer/telephone-call.png" height="20px"> +92 324 5396 002</p>
+        <p style="font-size: 18px;"><img src="./images/footer/email.png" height="20px"> support@Yummy-Yummy.com</p>
+        <p style="font-size: 18px;"><img src="./images/footer/location.png" height="20px"> Yummy-Yummy - Anwar Town, Phool Nagar, Multan Rd, Pattoki, Kasur, Punjab, Pakistan</p>
+
+        
+    </div>  
+
+
+    <div>
+
+        <h2>Our Timings</h2><br>
+        <p style="font-size: 18px;">Monday-Sunday</p><br>
+        <p style="font-size: 18px;">10:00 AM - 1:00 AM</p>
+    
+        
+    </div>
+
+
+    
+ 
+ </footer>
+
+
+
+    
+  
+    
+<script src="./javascript/index.js"></script>
+</body>
+</html>

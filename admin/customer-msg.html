@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="icon.png"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
+	<title>Customer-Messeges</title>
+
+	<style type="text/css">
+
+		* {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box; /* Add this line to include padding and border in the element's total width and height */
+        } 
+
+        body{
+
+        	background-color: var(--dishes-color);
+        }
+
+        :root {
+        		
+        	--header-background: #fff;
+        	--black: #192a56;
+        	--light-color:#666;
+        	--green:#27ae60;
+        	--dishes-color: #eee;
+        	--dropdown-content-background: #f1f1f1;	
+        	--box-shadow:0 .5rem 1.5rem  rgba(0, 0, 0, 0.1);
+
+        	}
+
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-bottom: 2px solid #ccc;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 3%;
+            box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        h3 {
+            color: #192a56;
+            margin-left: -12px;
+        }
+
+        header a {
+            display: inline-block;
+            padding: 10px;
+            margin-right: 5px;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: ghostwhite;
+            background-color: #27ae60;
+        }
+
+        header a:hover {
+            background-color: #219150;
+        }
+
+
+
+
+        .tab {
+
+            position: fixed;
+            overflow-y: scroll;
+            float: left;
+            border: 1px solid #ccc;
+            width: 16%;
+            margin-top: 60px;
+            height: 868px;
+            border-top: none;
+            background-color: #27ae60;
+
+        }
+
+        .tab a {
+            display: block;
+            color: white;
+            background-color: #27ae60;
+            padding: 12px 16px;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .tab a:hover {
+            background-color: #219150;
+        }
+
+.homeContent {
+
+   
+    float: right;    
+    width: 84%; 
+    height: fit-content;
+    margin-top: 56px;
+    padding: 10px; 
+    line-height: 25px;
+    border: px solid #ccc;
+
+
+    
+}
+
+table{
+            border: px solid;
+            border-collapse: collapse;
+            width: 90%;     
+            text-align: center;
+            margin-left: 65px;
+            margin-top: 40px;   
+        
+        
+        }
+
+        th{
+            padding: 8px;
+            padding-left: 15px;
+            border-bottom: 2px solid #ccc;
+            color:  #192a56;
+            
+        }
+
+
+        tr{
+            border-bottom: 1px solid #ccc;
+
+        }
+
+        td{
+            border: px solid;
+            font-size: 18px;
+            padding: 7px;
+            padding-left: 15px;
+
+        }
+
+
+
+
+    ::-webkit-scrollbar{
+        width: 11px;
+}
+
+    ::-webkit-scrollbar-track{
+        background: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+        background: #CACACA;
+        transition: 0.3s ease;
+        border-radius: 15px;
+}    
+
+
+    
+	</style>
+</head>
+<body>
+
+<header>
+		
+		<h3>Yummy-Yummy 😋</h3>
+		<a href="index.html">Logout <i class="fa-solid fa-right-from-bracket" style="color: var(--black);"></i> </a>	
+
+	</header>
+
+	<section class="tab">				
+
+        <a href="home.html">Home</a>      
+        <a href="popular-dishes.html" >Popular Dishes</a>	
+        <a href="category.html" >Category</a>	
+        <a href="menu-dishes.html" >Menu Dishes</a>
+        <a href="order.html" >Order</a>
+        <a href="customer-msg.html" >Customer Messege</a>
+        <a href="feedback.html" >FeedBack & Reviews</a>		
+        <a href="reg_customers.html" >Register Customers</a>	
+
+			  
+    </section>
+
+
+    <section class="homeContent">
+
+
+              <table id='msg'>
+                <tr>
+                         <th>Sr</th>                         
+                         <th>Name</th>
+                         <th>Email</th>
+                         <th>Number</th>                                        
+                         <th>Messege</th>
+                         <th>Date</th>
+                         <th>Action</th>
+
+                      </tr>
+
+           
+        
+               <tr>
+
+                <td>1</td>   
+                <td>Ali Hassan</td>
+                <td>hassan12@gmail.com</td>
+                <td>03245396002</td>    
+                <td>Hi,sir how was the day?</td>
+                <td>25-10-2024  </td>
+                <td> <a href=''>    <img src= 'delete.png' height='25px'> </a>  </td>
+
+                </tr>
+            
+
+            </table>
+
+            
+
+                        
+
+
+
+
+
+        
+    
+
+    </section>
+
+		   		
+
+
+</body>
+</html>

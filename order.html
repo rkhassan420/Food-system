@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yummy-Yummy </title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">   
+    <link rel="icon" type="image/x-icon" href="./favicon/icon.png">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> 
+
+    <style type="text/css">
+        
+        :root {
+           --container--background: #eee;
+           --title-color: #192a56;
+           --header-background: #fff;
+            --black: #192a56;
+            --light-color:#666;
+            --green:#27ae60;
+            --dishes-color: #eee;
+            --dropdown-content-background: #f1f1f1; 
+           --box-shadow:0 .5rem 1.5rem  rgba(0, 0, 0, 0.1);
+        }
+
+        *{
+        margin: 0; padding: 0;      
+        
+    }
+
+    
+
+        /* Header Css Start */
+
+    header{
+        position: fixed; 
+        top: 0;
+        left: 0;
+        right: 0;               
+       background: var(--header-background);
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 1% 5%;
+       box-shadow: var(--box-shadow);
+       z-index: 1; 
+        
+    }
+
+    header .logo{
+        color: var(--black) ;   
+        font-size: 16px;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+
+    header .navbar a{
+        border:px solid;
+        font-size: 16px;
+        border-radius: 5px;
+        padding: 7px 13px;
+        color: var(--light-color) ;
+        text-decoration: none;
+    } 
+    
+
+    header .navbar a.active,
+    header .navbar a:hover{
+
+        color: var(--header-background);
+        background: var(--green);
+    }
+
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropbtn {
+        background-color: transparent  ;
+        color: var(--light-color);
+        padding: 7px 13px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: var(--dropdown-content-background);
+        min-width: 140px;      
+       
+    }
+
+    .dropdown-content a {
+        color: var(--light-color);
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-size: 16px ;
+    }
+
+    .dropdown-content a:hover {
+                background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+                display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        color: var(--header-background);
+        background: var(--green);
+    }
+
+
+
+ header .icons a {
+        
+        margin-left: 8px; 
+        text-decoration: none;                        
+        width: 40px; 
+    }
+
+
+/* Header css End */
+
+.icons {
+    display: flex;   
+    align-items: center;
+
+}
+
+.search-container {
+    position: relative;
+}
+
+#search-input {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 30px; 
+    transform: translateY(-50%);
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 190px; /* Adjust as needed */
+}
+
+.search-container:hover #search-input {
+    display: block;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <header>
+
+    <a href="index.html" class="logo"> Yummy-Yummy 😋  </a>
+
+
+    
+    <nav class="navbar">
+
+        <a class="active" href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="order.html">Order</a>
+        <a href="contact.html">Contact</a>
+
+    <div class="dropdown">
+
+  <button class="dropbtn">Hi,Ali</button>
+
+  <div class="dropdown-content">
+    <a href="profile.html">Profile</a>
+     <a href="feedback.html">FeedBack</a>
+    <a href="login.html">Login</a>
+    <a href="login.html">Logout</a>
+  </div>
+</div>
+          
+        
+    </nav>  
+
+
+
+    <div class="icons" style="border: px solid ;">
+        
+        <div class="search-container">
+
+        <a href="#"> <img src="./icon/dark-search.png" id="search" height="25px"> </a>
+        <form>
+        <input type="text" id="search-input" placeholder="Search...">
+        </form>
+    </div>
+
+                     
+       <a href="cart.html"> <img src="./icon/carta.png" id="cart" height="25px"></a>
+        <sup><span style="font-size:15px; font-weight: bolder; margin-left: -10px;">
+       
+      </span> </sup>
+        <a href="#"><i class="fa-solid fa-bars" style="color: #0c0303;"></i> </a>
+   
+        
+    </div>
+    
+
+</header>
+
+
+
+
+</body>
+</html>
